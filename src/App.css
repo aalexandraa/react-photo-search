@@ -1,38 +1,76 @@
-.App {
+* {
+  background: hotpink;
+  font-family: "Palatino", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 36px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  display: grid;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.input,
+.button {
+  font-size: 16px;
+  padding: 5px 20px;
+  line-height: 28px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.input {
+  background-color: white;
+}
+
+.button {
+  background-color: black;
   color: white;
+  cursor: pointer;
+  transition: background-color 250ms;
 }
 
-.App-link {
-  color: #61dafb;
+.input:focus,
+.button:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.button:hover {
+  background-color: lightpink;
+}
+
+.card-list {
+  column-count: 3;
+}
+
+.card {
+  display: inline-flex;
+}
+
+.card--image {
+  flex: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-list {
+    column-count: 1;
   }
 }
